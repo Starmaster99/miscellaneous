@@ -1,22 +1,17 @@
 # математика для самых маленьких
 
-# a = 5
-# b = 6
+a = 5
+b = 6
 
-# plus = a+b
-# print(plus)
+print(a+b)
 
-# minus = a-b
-# print(minus)
+print(a-b)
 
-# mult = a*b
-# print(mult)
+print(a*b)
 
-# div = a/b
-# print(div)
+print(a/b)
 
-# power = a**b
-# print(power)
+print(a**b)
 
 # TODO: калькулятор
 
@@ -25,21 +20,16 @@ b=int(input('Второе число: '))
 znak=input('Что с ними сделать? ')
 res="Ваш ответ: "
 
-if znak == "+":
-    print(res, a+b)
-elif znak == "-":
-    print(res, a-b)
-elif znak == "*":
-    print(res, a*b)
-elif znak == "/":
-    print(res, a/b)
-else:
-    print('Введите нужное действие')
-
-
-
-
-
-
+try:
+    if znak == "+":
+        print(res, a+b)
+    elif znak == "-":
+        print(res, a-b)
+    elif znak == "*":
+        print(res, a*b)
+    elif znak == "/":
+        print(res, a/b)
+except(ZeroDivisionError):
+    print("Ошибка: нельзя делить на ноль.")
 
 
