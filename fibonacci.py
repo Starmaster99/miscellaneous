@@ -9,14 +9,9 @@ print('Числа Фибоначчи - это элементы числовой 
 
 print(a)
 
-while count < 12:
-#    print(count)
+for count in range(12):
     b = c + b
     print(b)
     c = b + c
     print(c)
-    count += 1
-
-
-
 
