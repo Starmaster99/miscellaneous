@@ -24,12 +24,10 @@ print(f"Сумма ваших чисел составляет {a}!")
 
 
 def hello():
-    name = input("Как мне тебя называть? ")
+    name = input("Как мне тебя называть? ").capitalize()
     return name
 
 def hi(name):
     print(f"Приветствую, {name}!")
 
 hi(hello())
-
-

@@ -20,7 +20,8 @@ class Computer:
         # Computer.computers += 1
 
     def __str__(self):
-        return "Итого: \n%s ядер, %s видеопамяти, %s ОЗУ, %s места на жёстких дистах.\nВсе правильно?" % (cores, vmemory, ram, hmemory)
+        return "Итого: \n%s ядер, %s видеопамяти, %s ОЗУ, %s места на жёстких дистах." \
+               "\nВсе правильно?" % (cores, vmemory, ram, hmemory)
 
 
 c = Computer(cores, vmemory, ram, hmemory)
