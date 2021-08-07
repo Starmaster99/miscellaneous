@@ -1,5 +1,4 @@
 # ООП для самых маленьких
-# TODO: в конце концов понять как работают классы и сделать что-нибудь ещё
 
 
 print("Мы - объектно-ориентированная компания по сбору ПК! Прежде всего мы ориентируемся на параметры компонентов, "
@@ -10,16 +9,16 @@ ram = input("Сколько оперативной памяти будет у к
 hmemory = input("Сколько всего будет памяти у ПК? В гигабайтах. ").strip()
 
 
-class Computer:
-    # computers = 0
+# немного терминологии
+
+class Computer:                                        # это - класс
     def __init__(self, cores, vmemory, ram, hmemory):  # инициализируем класс
-        self.cores = cores
+        self.cores = cores                             # это - атрибут класса
         self.vmemory = vmemory
         self.ram = ram
         self.hmemory = hmemory
-        # Computer.computers += 1
 
-    def __str__(self):
+    def __str__(self):  # это то, как себя будет вести класс в print()
         return "Итого: \n%s ядер, %s видеопамяти, %s ОЗУ, %s места на жёстких дистах." \
                "\nВсе правильно?" % (cores, vmemory, ram, hmemory)
 
