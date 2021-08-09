@@ -1,4 +1,5 @@
 # логирование и классы для самых маленьких
+# TODO: засовывать логи в файл
 
 # минутка теории
 # DEBUG: логи с информацией для отладки программы
@@ -9,38 +10,39 @@
 
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(filename='log.txt', level=logging.DEBUG,
+                    format='%(asctime)s : %(levelname)s : %(lineno)s line ::: %(message)s')
 
 a = int(input('Первое число: '))
 b = int(input('Второе число: '))
-logging.info(f'16:First number is {a}')
-logging.info(f'17:Second number is {b}')
+logging.info(f'First number is {a}')
+logging.info(f'Second number is {b}')
 
 
 class Simplemath:           # и тут у нас появляется класс
     def __init__(self):     # а тут мы его инициализируем для использования
         self.a = a          # функциями ниже
         self.b = b
-        logging.info('24:Successful class init')
+        logging.info('Successful class init')
 
     def add(self, a, b):
         plus = a + b
-        logging.info(f'28:Add ans:{plus}')
+        logging.info(f'Add ans:{plus}')
         return plus
 
     def subs(self, a, b):
         minus = a - b
-        logging.info(f'32:Substraction ans:{minus}')
+        logging.info(f'Substraction ans:{minus}')
         return minus
 
     def mult(self, a, b):
         mul = a * b
-        logging.info(f'38:Multiplying ans:{mul}')
+        logging.info(f'Multiplying ans:{mul}')
         return mul
 
     def div(self, a, b):
         divis = a / b
-        logging.info(f'43:Division ans:{divis}')
+        logging.info(f'Division ans:{divis}')
         return divis
 
 
