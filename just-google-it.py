@@ -3,8 +3,12 @@
 from googlesearch import search
 
 query = input('Что будем гуглить? ').strip()
-num = int(input('Сколько будем гуглить? ').strip())
 
+try:
+    n = int(input('Сколько будем гуглить? ').strip())
+except ValueError:
+    print('Ошибка! Введите целое положительное число!')
+    n = 0
 
-for i in search(query, tld='com', lang='ru', stop=num):
+for i in search(query, tld='com', lang='ru', num=n, stop=n):
     print(i)
