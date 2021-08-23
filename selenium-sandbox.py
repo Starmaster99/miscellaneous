@@ -1,17 +1,18 @@
 # selenium для самых маленьких
-import time
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys     # для печатания
-
 driver = webdriver.Chrome()
 
-driver.get("https://www.reddit.com/")
+driver.get("https://www.cnet.com/tech/computing/")
 print(driver.title)
 
-search = driver.find_element_by_id("header-search-bar")
-search.send_keys("r/cats")
-search.send_keys(Keys.RETURN)
+asset = driver.find_elements_by_class_name("o-linkOverlay")
 
-time.sleep(10)
+
+for asset_link in asset:
+    links = asset_link.get_attribute('href')
+    print(links)
+    # link = links.split("/")[-2]           # опционально. будет выводиться конец ссылки по типу
+    # print(link)                           # best-laptop
+
 driver.quit()
